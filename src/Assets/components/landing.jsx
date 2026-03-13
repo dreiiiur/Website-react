@@ -207,13 +207,7 @@ export default function Landing() {
             <span className={`${isDark ? "text-white/30" : "text-slate-500"} text-xs tracking-[0.3em] uppercase hidden sm:block mt-1`}>Marketing</span>
           </button>
           <div className="hidden md:flex items-center gap-4">
-            <button
-              onClick={() => setTheme(isDark ? "light" : "dark")}
-              className={`flex items-center gap-2 border ${isDark ? "border-white/10 bg-white/10 text-white/80 hover:bg-white/20 hover:text-white" : "border-slate-200/60 bg-white/60 text-[#0a0a0a]/80 hover:bg-white/70 hover:text-[#0a0a0a]"} transition-all duration-200 px-4 py-2 rounded-full`}
-            >
-              <span className="text-sm">{isDark ? "Light" : "Dark"}</span>
-              <span className="text-lg">{isDark ? "☀️" : "🌙"}</span>
-            </button>
+            
             <div className="flex items-center gap-10">
               {NAV_LINKS.map((l) => (
                 <button key={l} onClick={() => scrollTo(l.toLowerCase().replace(/\s/g, "-"))} className={`${isDark ? "text-white/60 hover:text-white" : "text-[#0a0a0a]/70 hover:text-[#0a0a0a]"} text-sm tracking-widest uppercase underline-anim transition-colors duration-200`}>
@@ -223,6 +217,13 @@ export default function Landing() {
               <button onClick={() => scrollTo("connect")} className="border gold-border bg-[#f97316] text-black text-sm tracking-widest uppercase px-6 py-2.5 hover:bg-[#fb923c] transition-all duration-300">
                 Get Started
               </button>
+              <button
+              onClick={() => setTheme(isDark ? "light" : "dark")}
+              className={`flex items-center gap-2 border ${isDark ? "border-white/10 bg-white/10 text-white/80 hover:bg-white/20 hover:text-white" : "border-slate-200/60 bg-white/60 text-[#0a0a0a]/80 hover:bg-white/70 hover:text-[#0a0a0a]"} transition-all duration-200 px-4 py-2 rounded-full`}
+            >
+              <span className="text-sm">{isDark ? "Light" : "Dark"}</span>
+              <span className="text-lg">{isDark ? "☀️" : "🌙"}</span>
+            </button>
             </div>
           </div>
           <button onClick={() => setMenuOpen(!menuOpen)} className={`md:hidden ${isDark ? "text-white/70 hover:text-white" : "text-[#0a0a0a]/70 hover:text-[#0a0a0a]"} p-2`}>
@@ -233,18 +234,22 @@ export default function Landing() {
         </div>
         {menuOpen && (
           <div className={`md:hidden px-6 py-6 flex flex-col gap-5 font-body ${isDark ? "bg-[#0d0d0d] border-t border-white/5" : "bg-white border-t border-slate-200/40"}`}>
-            <button
-              onClick={() => setTheme(isDark ? "light" : "dark")}
-              className={`flex items-center justify-between border ${isDark ? "border-white/10 bg-white/10 text-white/70 hover:bg-white/20 hover:text-white" : "border-slate-200/60 bg-white/60 text-[#0a0a0a]/70 hover:bg-white/70 hover:text-[#0a0a0a]"} transition-all duration-200 px-4 py-3 rounded-full`}
-            >
-              <span className="text-sm">{isDark ? "Light Mode" : "Dark Mode"}</span>
-              <span className="text-lg">{isDark ? "☀️" : "🌙"}</span>
-            </button>
+           
             {[...NAV_LINKS, "Get Started"].map((l) => (
               <button key={l} onClick={() => scrollTo(l.toLowerCase().replace(/\s/g, "-"))} className={`${isDark ? "text-white/70 hover:text-orange-200" : "text-[#0a0a0a]/70 hover:text-[#f97316]"} text-sm tracking-widest uppercase text-left transition-colors duration-200`}>
                 {l}
               </button>
             ))}
+             <button
+              onClick={() => setTheme(isDark ? "light" : "dark")}
+/*************  ✨ Windsurf Command 🌟  *************/
+              className={`flex items-center justify-between border ${isDark ? "border-white/10 bg-white/10 text-white/70 hover:bg-white/20 hover:text-white" : "border-slate-200/60 bg-white/60 text-[#0a0a0a]/70 hover:bg-white/70 hover:text-[#0a0a0a]"} transition-all duration-200 px-4 py-3 rounded-full w-fit`}
+              className={`flex items-center justify-between border ${isDark ? "border-white/10 bg-white/10 text-white/70 hover:bg-white/20 hover:text-white" : "border-slate-200/60 bg-white/60 text-[#0a0a0a]/70 hover:bg-white/70 hover:text-[#0a0a0a]"} transition-all duration-200 px-4 py-3 rounded-full`}
+            >
+/*******  3b7239ad-f6a1-4d19-8216-d744c8db86ff  *******/
+              <span className="text-sm">{isDark ? "Light Mode" : "Dark Mode"}</span>
+              <span className="text-lg">{isDark ? "☀️" : "🌙"}</span>
+            </button>
           </div>
         )}
       </nav>
