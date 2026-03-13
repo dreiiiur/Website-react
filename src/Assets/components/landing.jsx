@@ -214,14 +214,13 @@ export default function Landing() {
                   {l}
                 </button>
               ))}
-              <button onClick={() => scrollTo("connect")} className="border gold-border bg-[#f97316] text-black text-sm tracking-widest uppercase px-6 py-2.5 hover:bg-[#fb923c] transition-all duration-300">
+              <button onClick={() => scrollTo("connect")} className="border rounded-full gold-border bg-[#f97316] text-black text-sm tracking-widest uppercase px-6 py-2.5 hover:bg-[#fb923c] transition-all duration-300">
                 Get Started
               </button>
               <button
               onClick={() => setTheme(isDark ? "light" : "dark")}
-              className={`flex items-center gap-2 border ${isDark ? "border-white/10 bg-white/10 text-white/80 hover:bg-white/20 hover:text-white" : "border-slate-200/60 bg-white/60 text-[#0a0a0a]/80 hover:bg-white/70 hover:text-[#0a0a0a]"} transition-all duration-200 px-4 py-2 rounded-full`}
+              className={`flex items-center gap-2 border ${isDark ? "border-white/10 bg-white/10 text-white/80 hover:bg-white/20 hover:text-white" : "border-slate-200/60 bg-white/60 text-[#0a0a0a]/80 hover:bg-white/90 hover:text-[#0a0a0a]"} transition-all duration-200 px-4 py-2 rounded-full`}
             >
-              <span className="text-sm">{isDark ? "Light" : "Dark"}</span>
               <span className="text-lg">{isDark ? "☀️" : "🌙"}</span>
             </button>
             </div>
@@ -242,12 +241,8 @@ export default function Landing() {
             ))}
              <button
               onClick={() => setTheme(isDark ? "light" : "dark")}
-/*************  ✨ Windsurf Command 🌟  *************/
               className={`flex items-center justify-between border ${isDark ? "border-white/10 bg-white/10 text-white/70 hover:bg-white/20 hover:text-white" : "border-slate-200/60 bg-white/60 text-[#0a0a0a]/70 hover:bg-white/70 hover:text-[#0a0a0a]"} transition-all duration-200 px-4 py-3 rounded-full w-fit`}
-              className={`flex items-center justify-between border ${isDark ? "border-white/10 bg-white/10 text-white/70 hover:bg-white/20 hover:text-white" : "border-slate-200/60 bg-white/60 text-[#0a0a0a]/70 hover:bg-white/70 hover:text-[#0a0a0a]"} transition-all duration-200 px-4 py-3 rounded-full`}
-            >
-/*******  3b7239ad-f6a1-4d19-8216-d744c8db86ff  *******/
-              <span className="text-sm">{isDark ? "Light Mode" : "Dark Mode"}</span>
+>             
               <span className="text-lg">{isDark ? "☀️" : "🌙"}</span>
             </button>
           </div>
