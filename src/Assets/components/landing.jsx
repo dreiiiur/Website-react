@@ -500,7 +500,7 @@ export default function Landing() {
       <footer className="border-t border-white/5 py-10 px-6 md:px-12">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 font-body">
           <span className="font-display text-xl font-light tracking-widest gold">LYVERA</span>
-          <p className="text-[#0a0a0a]/20 text-xs tracking-widest text-center">
+          <p className={`${isDark ? "text-white/50" : "text-[#0a0a0a]/6re0"} text-xs tracking-widest text-center`}>
             © {new Date().getFullYear()} Lyvera Marketing Services. All rights reserved.
           </p>
           <div className="flex gap-4">
