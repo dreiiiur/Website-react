@@ -232,7 +232,7 @@ export default function Landing() {
                   {l}
                 </button>
               ))}
-              <button onClick={() => scrollTo("connect")} className="border rounded-full gold-border bg-[#f97316] text-black text-sm tracking-widest uppercase px-6 py-2.5 hover:bg-[#fb923c] transition-all duration-300">
+              <button onClick={() => scrollTo("connect")} className="border rounded-full gold-border bg-[#f97316] text-white text-sm tracking-widest uppercase px-6 py-2.5 hover:bg-[#fb923c] transition-all duration-300">
                 Get Started
               </button>
               <button
@@ -303,22 +303,22 @@ export default function Landing() {
 
         <div className="relative z-10 max-w-5xl mx-auto px-6 md:px-12 text-center">
           <div className="inline-flex items-center justify-center gap-3 mb-10 opacity-0 animate-[fadeIn_0.8s_0.2s_forwards]" style={{ animation: "fadeIn 0.8s 0.2s forwards" }}>
-            <span className={`text-xs tracking-widest uppercase font-body ${isDark ? "text-white/40" : "text-[#0a0a0a]/50"}`}>Backed by Y‑Combinator</span>
+            <span className={`text-xs tracking-widest uppercase font-body ${isDark ? "text-white/40" : "text-[#0a0a0a]/50"}`}>TRUSTED BY GROWING BRANDS</span>
             <span className={`inline-flex items-center gap-2 px-4 py-1 rounded-full ${isDark ? "bg-white/5 text-white/40" : "bg-black/5 text-[#0a0a0a]/60"} text-xs tracking-widest uppercase`}>
               <span className="w-1 h-1 rounded-full bg-[#f97316]" />
-              Trusted, Real-time Data
+              DATA-DRIVEN MARKETING
             </span>
           </div>
           <h1 className="font-display font-semibold text-5xl md:text-7xl lg:text-[5.5rem] leading-[1.05] tracking-tight mb-8" style={{ animation: "fadeUp 1s 0.35s both" }}>
-            <span className={`block ${isDark ? "text-white" : "text-[#0a0a0a]"}`}>Real-time Data.</span>
-            <span className={`block ${isDark ? "text-white/70" : "text-[#0a0a0a]/70"}`}>Smarter <span className="text-[#f97316]">Decisions</span>.</span>
+            <span className={`block ${isDark ? "text-white" : "text-[#0a0a0a]"}`}>Data-Driven Marketing.</span>
+            <span className={`block ${isDark ? "text-white/70" : "text-[#0a0a0a]/70"}`}>Smarter Brand <span className="text-[#f97316]">Growth</span>.</span>
           </h1>
           <p className={`font-body font-light ${isDark ? "text-white/40" : "text-[#0a0a0a]/40"} text-base md:text-lg max-w-xl mx-auto mb-12 leading-relaxed tracking-wide`} style={{ animation: "fadeUp 1s 0.55s both" }}>
-            Instantly enrich your apps, sales, and research with accurate, up-to-the-second company and people data.
+            Instantly scale your brand with strategic marketing, creative campaigns, and performance-driven data that convert audiences into customers.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4" style={{ animation: "fadeUp 1s 0.7s both" }}>
             <button onClick={() => scrollTo("connect")} className="bg-gradient-to-r from-[#f97316] to-[#fb923c] text-black font-body font-semibold tracking-widest uppercase text-sm px-10 py-4 rounded-full shadow-lg shadow-[#f97316]/20 hover:shadow-[#f97316]/35 transition-all duration-300">
-              Start Your Free Trial
+              View Our Services
             </button>
           </div>
         </div>
