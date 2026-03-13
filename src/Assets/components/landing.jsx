@@ -418,7 +418,7 @@ export default function Landing() {
 
           {/* Controls */}
           <div className="flex items-center gap-6 mt-10">
-            <button onClick={prevTeam} className="w-12 h-12 border border-white/10 dark:border-orange-400/20 flex items-center justify-center text-white/40 dark:text-orange-400 hover:border-orange-400/50 hover:text-orange-400 transition-all duration-300">
+            <button onClick={prevTeam} className="w-12 h-12 border border-white/20 dark:border-orange-400/20 flex items-center justify-center text-white/40 dark:text-orange-400 hover:border-orange-400/50 hover:text-orange-400 transition-all duration-300">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7" /></svg>
             </button>
             <div className="flex gap-2">
