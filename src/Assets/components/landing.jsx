@@ -43,33 +43,51 @@ const SERVICES = [
 
 const TEAM = [
   {
-    name: "Sushi Fiesta",
-    role: "Founder & Creative Director",
+    name: "Ted Bamo",
+    role: "CEO & Founder",
     img: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&q=80",
     quote: "Marketing is the art of telling stories that matter.",
   },
   {
-    name: "Marcus Liu",
-    role: "Head of Digital Strategy",
-    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
+    name: "Siouxie Gail Say",
+    role: "Creative Director",
+    img: "https://scontent.fmnl33-5.fna.fbcdn.net/v/t39.30808-6/467957278_1126643625733629_1281541246403154528_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=7b2446&_nc_ohc=c61-ndHuY08Q7kNvwH6AQbu&_nc_oc=AdlZddhWIu7QWaY3PrxYDxcg6Ig1QTx2eigek_AnE1zi_Cq6Qm_4x9OM95j4hFnQWP8&_nc_zt=23&_nc_ht=scontent.fmnl33-5.fna&_nc_gid=FaPZH3JcWv7VdX95zfX-3Q&_nc_ss=8&oh=00_AfzdenI2R2o2yTcBOI2lDU59EkuSpuherhMjpvGajYSywg&oe=69BA046C",
     quote: "Every click is a conversation waiting to happen.",
   },
   {
-    name: "Sofia Andres",
-    role: "Content & Brand Lead",
-    img: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400&q=80",
+    name: "Brix Fiesta",
+    role: "Art Director",
+    img: "https://scontent.fmnl33-1.fna.fbcdn.net/v/t39.30808-6/472632492_1037619974789574_4161928441472955407_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=53a332&_nc_ohc=9BqH3JKKxDEQ7kNvwElLjqp&_nc_oc=Admc-CT1kb5zmPiQM9mdZjdwwMPRFZ_NbVVLsBPDhJ8axtNutKm7gxhUg-2sRHtLjfo&_nc_zt=23&_nc_ht=scontent.fmnl33-1.fna&_nc_gid=WEJG4EbZ56K0-u5yCMfukA&_nc_ss=8&oh=00_Afw8StJmC0ZUf8SX9w7NtjjLlVbu1Lbn3FBxBeMZA_TWfw&oe=69B9EDEF",
     quote: "Great content doesn't interrupt — it invites.",
   },
   {
-    name: "Jordan Park",
-    role: "Performance Marketing Specialist",
-    img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80",
+    name: "Andrei Poma",
+    role: "Web Developer / UI/UX Designer",
+    img: "https://scontent.fmnl33-5.fna.fbcdn.net/v/t39.30808-6/569377540_24580595441635680_298226403802057332_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=dsfEN-3tcOoQ7kNvwHl_w_A&_nc_oc=Adn5iGk6kWxolCYpAhtw9t9ZMr2xT3ODiGBjsxaZOiYc3ELPGjzoPVqsl4SN9Wo1DbI&_nc_zt=23&_nc_ht=scontent.fmnl33-5.fna&_nc_gid=LVQ3NFs7Rf0EapEQy4ADnw&_nc_ss=8&oh=00_Afz5RNVY1n-fIwjTaIfTlCj3KB_T6S-HzVApchbsSizNaA&oe=69B9EC53",
     quote: "Numbers don't lie. They tell your best story.",
   },
   {
-    name: "Isla Nakamura",
-    role: "Social Media & Community Manager",
-    img: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&q=80",
+    name: "Edric Dacumos",
+    role: "Video Editor / Motion Designer",
+    img: "https://scontent.fmnl33-1.fna.fbcdn.net/v/t39.30808-6/643852395_122194487462945109_6602140075914130182_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=13d280&_nc_ohc=lZWXRAtGMkQQ7kNvwE2XFlt&_nc_oc=AdkiovqFUnIO_aYW8Q2mfdt8VuxECTKLq4GPuCvKvceNJJPiV0D0Fi6C1BWqlFoKKoU&_nc_zt=23&_nc_ht=scontent.fmnl33-1.fna&_nc_gid=w_OVtlqxYTCES5bHf7QZ8g&_nc_ss=8&oh=00_AfwRZv_kL6b7nVT0qj47ECMVPBqr2HHSkyIOxdnp9npKqQ&oe=69B9F907  ",
+    quote: "Community is the new currency of brands.",
+  },
+  {
+    name: "Aldrin Dela Cruz",
+    role: "Video Editor / Motion Designer",
+    img: "https://scontent.fmnl33-5.fna.fbcdn.net/v/t39.30808-6/447673844_3294759733987389_364906525712232691_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=53a332&_nc_ohc=h1JmUpnGMUcQ7kNvwFluqOI&_nc_oc=AdmTlRkf5VNhnXaXwWWnWgY5pHiwmMKErpndu340W8RfM0Jqxm7URnhh91uxCV5v_9U&_nc_zt=23&_nc_ht=scontent.fmnl33-5.fna&_nc_gid=lG_jHNBofR4BGz4FQtK75g&_nc_ss=8&oh=00_Afz3wbqtykox74LvIIemk9x9kqmgf6xhf6i6DRfze1nr7A&oe=69B9EEDD",
+    quote: "Community is the new currency of brands.",
+  },
+  {
+    name: "Brix Aldrin Macapagal",
+    role: "Video Editor / Motion Designer",
+    img: "https://scontent.fmnl33-2.fna.fbcdn.net/v/t39.30808-6/508287723_1483321315964838_8239034240863401931_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=b895b5&_nc_ohc=4vCV4_7FqmcQ7kNvwHaTMgc&_nc_oc=AdnIjF1GMZDYVn7XEEqLkzGQecdRzVZwGK2HRqhY5bpJVWwVojaGFAyjTeG6FUxZ4JA&_nc_zt=23&_nc_ht=scontent.fmnl33-2.fna&_nc_gid=bE1Bs8p9jl-nAlO-vHi-Mg&_nc_ss=8&oh=00_AfymTwZi96J_7Wl5op5ToGmZ3odINNQLUlkWtcgK4Eashg&oe=69BA087B",
+    quote: "Community is the new currency of brands.",
+  },
+    {
+    name: "Jan Lorenz Cortez",
+    role: "Video Editor / Motion Designer",
+    img: "https://scontent.fmnl33-4.fna.fbcdn.net/v/t39.30808-6/598034841_122109857847111004_6007638358921507327_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=106&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=O3G1YzoD5yQQ7kNvwHMov3u&_nc_oc=AdmYlLHiWk7SFml9-0hqXkBRFBb0sm0rPHa6VpK8_0giDkjZ5eUSbZ1UYkhMtYckIXE&_nc_zt=23&_nc_ht=scontent.fmnl33-4.fna&_nc_gid=qdx9m9T-7US0l0r45kZNOA&_nc_ss=8&oh=00_AfznsB9JIHSZljKc8X-R5GZyo_gM17pTU7yZc4pd6Sf-Kw&oe=69B9F3AC  ",
     quote: "Community is the new currency of brands.",
   },
 ];
@@ -366,7 +384,7 @@ export default function Landing() {
       >
         <div className="mb-16 md:mb-20">
           <p className="font-body text-[#f97316]/70 text-xs tracking-[0.4em] uppercase mb-4">The People</p>
-          <h2 className="font-display font-light text-4xl md:text-6xl text-[#0a0a0a]/90 leading-tight">
+          <h2 className="font-display font-light text-4xl md:text-6xl" style={{ color: isDark ? "rgba(255, 255, 255, 0.7)" : "rgba(0, 0, 0, 0.7)" }} leading-tight>
             Meet the<br /><em className="gold">Minds Behind</em>
           </h2>
         </div>
@@ -380,7 +398,7 @@ export default function Landing() {
                 <div
                   key={m.name}
                   onClick={() => setTeamIdx(i)}
-                  className={`card-hover flex-shrink-0 cursor-pointer transition-all duration-500 border ${isActive ? "border-orange-400/40 bg-[#14120e]" : "border-white/5 bg-[#111010]"}`}
+                  className={`card-hover flex-shrink-0 cursor-pointer transition-all duration-500 border ${isActive ? "border-orange-400/40 bg-[#14120e]" : "border-white/5 bg-white/5"} ${isDark ? "bg-[#14120e]" : "bg-white/5"}`}
                   style={{ width: "calc(33.33% - 13px)", minWidth: "260px" }}
                 >
                   <div className="relative h-64 overflow-hidden">
@@ -391,7 +409,7 @@ export default function Landing() {
                   <div className="p-6">
                     <h3 className={`font-display text-xl font-light transition-colors duration-300 ${isActive ? "text-orange-400" : isDark ? "text-white/50" : "text-[#0a0a0a]/50"}`}>{m.name}</h3>
                     <p className={`font-body text-xs tracking-widest uppercase ${isDark ? "text-white/30" : "text-[#0a0a0a]/40"} mt-1 mb-4`}>{m.role}</p>
-                    <p className={`font-display italic text-sm leading-relaxed transition-all duration-300 ${isActive ? (isDark ? "text-white/70" : "text-[#0a0a0a]/70") : (isDark ? "text-white/20" : "text-[#0a0a0a]/30")}`}>&quot;{m.quote}&quot;</p>
+                    <p className={`font-display italic text-sm leading-relaxed transition-all duration-300 ${isActive ? (isDark ? "text-white/10" : "text-[#0a0a0a]/70") : (isDark ? "text-white/20" : "text-[#0a0a0a]/30")}`}>&quot;{m.quote}&quot;</p>
                   </div>
                 </div>
               );
@@ -400,7 +418,7 @@ export default function Landing() {
 
           {/* Controls */}
           <div className="flex items-center gap-6 mt-10">
-            <button onClick={prevTeam} className="w-12 h-12 border border-white/10 flex items-center justify-center text-white/40 hover:border-orange-400/50 hover:text-orange-400 transition-all duration-300">
+            <button onClick={prevTeam} className="w-12 h-12 border border-white/10 dark:border-orange-400/20 flex items-center justify-center text-white/40 dark:text-orange-400 hover:border-orange-400/50 hover:text-orange-400 transition-all duration-300">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7" /></svg>
             </button>
             <div className="flex gap-2">
@@ -408,7 +426,7 @@ export default function Landing() {
                 <button key={i} onClick={() => setTeamIdx(i)} className={`transition-all duration-300 rounded-full ${i === teamIdx ? "w-8 h-1.5 bg-[#f97316]" : "w-1.5 h-1.5 bg-black/20"}`} />
               ))}
             </div>
-            <button onClick={nextTeam} className="w-12 h-12 border border-white/10 flex items-center justify-center text-white/40 hover:border-[#f97316]/50 hover:text-[#f97316] transition-all duration-300">
+            <button onClick={nextTeam} className="w-12 h-12 border border-white/10 dark:border-[#f97316]/20 flex items-center justify-center text-white/40 dark:text-[#f97316]/50 hover:border-[#f97316]/50 hover:text-[#f97316] transition-all duration-300">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
             </button>
             <span className="font-body text-white/20 text-xs ml-2 tracking-widest">{String(teamIdx + 1).padStart(2, "0")} / {String(TEAM.length).padStart(2, "0")}</span>
@@ -430,10 +448,10 @@ export default function Landing() {
         <div className="grid md:grid-cols-2 gap-16 items-start">
           <div>
             <p className="font-body text-[#f97316]/70 text-xs tracking-[0.4em] uppercase mb-4">Get in Touch</p>
-          <h2 className="font-display font-light text-4xl md:text-6xl text-[#0a0a0a]/90 leading-tight mb-6">
+          <h2 className="font-display font-light text-4xl md:text-6xl leading-tight mb-6 dark:text-white dark:opacity-90" style={{color: isDark ? "white" : "rgba(0, 0, 0, 0.9)"}}>
             Let&apos;s Create<br /><em className="gold">Something Great</em>
           </h2>
-          <p className="font-body text-[#0a0a0a]/40 text-sm leading-relaxed mb-10 max-w-sm">
+          <p className={`font-body ${isDark ? "text-white/70" : "text-[#0a0a0a]/70"} text-sm group-hover:${isDark ? "text-white" : "text-[#f97316]"} transition-colors duration-300 mb-4`} text-sm leading-relaxed mb-10 max-w-sm>
               Ready to transform your brand? Reach out through any of our channels and a member of the Lyvera team will respond within 24 hours.
             </p>
             <div className="flex flex-col gap-3">
