@@ -45,49 +45,49 @@ const TEAM = [
   {
     name: "Ted Bamo",
     role: "CEO & Founder",
-    img: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&q=80",
+    img: "/src/Assets/images/team/SirTed.png",
     quote: "Marketing is the art of telling stories that matter.",
   },
   {
     name: "Siouxie Gail Say",
     role: "Creative Director",
-    img: "https://scontent.fmnl33-5.fna.fbcdn.net/v/t39.30808-6/467957278_1126643625733629_1281541246403154528_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=7b2446&_nc_ohc=c61-ndHuY08Q7kNvwH6AQbu&_nc_oc=AdlZddhWIu7QWaY3PrxYDxcg6Ig1QTx2eigek_AnE1zi_Cq6Qm_4x9OM95j4hFnQWP8&_nc_zt=23&_nc_ht=scontent.fmnl33-5.fna&_nc_gid=FaPZH3JcWv7VdX95zfX-3Q&_nc_ss=8&oh=00_AfzdenI2R2o2yTcBOI2lDU59EkuSpuherhMjpvGajYSywg&oe=69BA046C",
+    img: "/src/Assets/images/team/sushi.png",
     quote: "Every click is a conversation waiting to happen.",
   },
   {
     name: "Brix Fiesta",
     role: "Art Director",
-    img: "https://scontent.fmnl33-1.fna.fbcdn.net/v/t39.30808-6/472632492_1037619974789574_4161928441472955407_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=53a332&_nc_ohc=9BqH3JKKxDEQ7kNvwElLjqp&_nc_oc=Admc-CT1kb5zmPiQM9mdZjdwwMPRFZ_NbVVLsBPDhJ8axtNutKm7gxhUg-2sRHtLjfo&_nc_zt=23&_nc_ht=scontent.fmnl33-1.fna&_nc_gid=WEJG4EbZ56K0-u5yCMfukA&_nc_ss=8&oh=00_Afw8StJmC0ZUf8SX9w7NtjjLlVbu1Lbn3FBxBeMZA_TWfw&oe=69B9EDEF",
+    img: "/src/Assets/images/team/brixfiesta.png",
     quote: "Great content doesn't interrupt — it invites.",
   },
   {
     name: "Andrei Poma",
     role: "Web Developer / UI/UX Designer",
-    img: "https://scontent.fmnl33-5.fna.fbcdn.net/v/t39.30808-6/569377540_24580595441635680_298226403802057332_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=dsfEN-3tcOoQ7kNvwHl_w_A&_nc_oc=Adn5iGk6kWxolCYpAhtw9t9ZMr2xT3ODiGBjsxaZOiYc3ELPGjzoPVqsl4SN9Wo1DbI&_nc_zt=23&_nc_ht=scontent.fmnl33-5.fna&_nc_gid=LVQ3NFs7Rf0EapEQy4ADnw&_nc_ss=8&oh=00_Afz5RNVY1n-fIwjTaIfTlCj3KB_T6S-HzVApchbsSizNaA&oe=69B9EC53",
+    img: "/src/Assets/images/team/andrei.png",
     quote: "Numbers don't lie. They tell your best story.",
   },
   {
     name: "Edric Dacumos",
     role: "Video Editor / Motion Designer",
-    img: "https://scontent.fmnl33-1.fna.fbcdn.net/v/t39.30808-6/643852395_122194487462945109_6602140075914130182_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=13d280&_nc_ohc=lZWXRAtGMkQQ7kNvwE2XFlt&_nc_oc=AdkiovqFUnIO_aYW8Q2mfdt8VuxECTKLq4GPuCvKvceNJJPiV0D0Fi6C1BWqlFoKKoU&_nc_zt=23&_nc_ht=scontent.fmnl33-1.fna&_nc_gid=w_OVtlqxYTCES5bHf7QZ8g&_nc_ss=8&oh=00_AfwRZv_kL6b7nVT0qj47ECMVPBqr2HHSkyIOxdnp9npKqQ&oe=69B9F907  ",
+    img: "/src/Assets/images/team/edric.png",
     quote: "Community is the new currency of brands.",
   },
   {
     name: "Aldrin Dela Cruz",
     role: "Video Editor / Motion Designer",
-    img: "https://scontent.fmnl33-5.fna.fbcdn.net/v/t39.30808-6/447673844_3294759733987389_364906525712232691_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=53a332&_nc_ohc=h1JmUpnGMUcQ7kNvwFluqOI&_nc_oc=AdmTlRkf5VNhnXaXwWWnWgY5pHiwmMKErpndu340W8RfM0Jqxm7URnhh91uxCV5v_9U&_nc_zt=23&_nc_ht=scontent.fmnl33-5.fna&_nc_gid=lG_jHNBofR4BGz4FQtK75g&_nc_ss=8&oh=00_Afz3wbqtykox74LvIIemk9x9kqmgf6xhf6i6DRfze1nr7A&oe=69B9EEDD",
+    img: "/src/Assets/images/team/aldrin.png",
     quote: "Community is the new currency of brands.",
   },
   {
     name: "Brix Aldrin Macapagal",
     role: "Video Editor / Motion Designer",
-    img: "https://scontent.fmnl33-2.fna.fbcdn.net/v/t39.30808-6/508287723_1483321315964838_8239034240863401931_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=b895b5&_nc_ohc=4vCV4_7FqmcQ7kNvwHaTMgc&_nc_oc=AdnIjF1GMZDYVn7XEEqLkzGQecdRzVZwGK2HRqhY5bpJVWwVojaGFAyjTeG6FUxZ4JA&_nc_zt=23&_nc_ht=scontent.fmnl33-2.fna&_nc_gid=bE1Bs8p9jl-nAlO-vHi-Mg&_nc_ss=8&oh=00_AfymTwZi96J_7Wl5op5ToGmZ3odINNQLUlkWtcgK4Eashg&oe=69BA087B",
+    img: "/src/Assets/images/team/brixaldrin.png",
     quote: "Community is the new currency of brands.",
   },
     {
     name: "Jan Lorenz Cortez",
     role: "Video Editor / Motion Designer",
-    img: "https://scontent.fmnl33-4.fna.fbcdn.net/v/t39.30808-6/598034841_122109857847111004_6007638358921507327_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=106&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=O3G1YzoD5yQQ7kNvwHMov3u&_nc_oc=AdmYlLHiWk7SFml9-0hqXkBRFBb0sm0rPHa6VpK8_0giDkjZ5eUSbZ1UYkhMtYckIXE&_nc_zt=23&_nc_ht=scontent.fmnl33-4.fna&_nc_gid=qdx9m9T-7US0l0r45kZNOA&_nc_ss=8&oh=00_AfznsB9JIHSZljKc8X-R5GZyo_gM17pTU7yZc4pd6Sf-Kw&oe=69B9F3AC  ",
+    img: "/src/Assets/images/team/janjan.png",
     quote: "Community is the new currency of brands.",
   },
 ];
@@ -409,7 +409,7 @@ export default function Landing() {
                   <div className="p-6">
                     <h3 className={`font-display text-xl font-light transition-colors duration-300 ${isActive ? "text-orange-400" : isDark ? "text-white/50" : "text-[#0a0a0a]/50"}`}>{m.name}</h3>
                     <p className={`font-body text-xs tracking-widest uppercase ${isDark ? "text-white/30" : "text-[#0a0a0a]/40"} mt-1 mb-4`}>{m.role}</p>
-                    <p className={`font-display italic text-sm leading-relaxed transition-all duration-300 ${isActive ? (isDark ? "text-white/10" : "text-[#0a0a0a]/70") : (isDark ? "text-white/20" : "text-[#0a0a0a]/30")}`}>&quot;{m.quote}&quot;</p>
+                    <p className={`font-display italic text-sm leading-relaxed transition-all duration-300 ${isActive ? (isDark ? "text-white/50" : "text-[#0a0a0a]/70") : (isDark ? "text-white/20" : "text-[#0a0a0a]/30")}`}>&quot;{m.quote}&quot;</p>
                   </div>
                 </div>
               );
