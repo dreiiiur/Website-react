@@ -1,5 +1,14 @@
+import { useState, useEffect } from 'react';
 import Landing from "./Assets/components/landing.jsx";
+import Splashscreen from "./Assets/components/splashscreen.jsx";
 
 export default function App() {
-  return <Landing />;
+  const [showSplash, setShowSplash] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setShowSplash(false), 3000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  return showSplash ? <Splashscreen /> : <Landing />;
 }

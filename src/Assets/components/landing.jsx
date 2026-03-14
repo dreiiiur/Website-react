@@ -211,7 +211,7 @@ export default function Landing() {
         .gold { color: #f97316; }
         .gold-border { border-color: #f97316; }
         .gold-bg { background-color: #f97316; }
-        .slider-track { display: flex; transition: transform 0.6s cubic-bezier(.22,1,.36,1); }
+        .slider-track { display: flex; transition: transform 0.6s cubic-bezier(.27,2,.46,2); }
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: #f5f5f5; }
         ::-webkit-scrollbar-thumb { background: #f9731644; border-radius: 3px; }
