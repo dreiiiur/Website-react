@@ -218,7 +218,7 @@ export default function Landing() {
       `}</style>
 
       {/* NAV */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 font-body ${isDark ? "bg-[#0a0a0a]/90 border-b border-white/5" : "bg-white/90 border-b border-slate-200/40"}`}>
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 font-body ${scrolled ? (isDark ? "bg-[#0a0a0a]/95 border-b border-white/10" : "bg-white/95 border-b border-slate-200/60") : (isDark ? "bg-[#0a0a0a]/90 border-b border-white/5" : "bg-white/90 border-b border-slate-200/40")}`}>
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-5 flex items-center justify-between">
           <button onClick={() => scrollTo("hero")} className="flex items-center gap-2 group">
             <span className="font-display text-2xl font-light tracking-widest gold">LYVERA</span>
@@ -230,9 +230,9 @@ export default function Landing() {
               {NAV_LINKS.map((l) => (
                 <button key={l} onClick={() => scrollTo(l.toLowerCase().replace(/\s/g, "-"))} className={`${isDark ? "text-white/60 hover:text-white" : "text-[#0a0a0a]/70 hover:text-[#0a0a0a]"} text-sm tracking-widest uppercase underline-anim transition-colors duration-200`}>
                   {l}
-                </button>
+                </button> 
               ))}
-              <button onClick={() => scrollTo("connect")} className="border rounded-full gold-border bg-[#f97316] text-white text-sm tracking-widest uppercase px-6 py-2.5 hover:bg-[#fb923c] transition-all duration-300">
+              <button onClick={() => scrollTo("connect")} className="border rounded-full gold-border bg-[#f97316] text-black text-sm tracking-widest uppercase px-6 py-2.5 hover:bg-[#fb923c] transition-all duration-300">
                 Get Started
               </button>
               <button
@@ -303,22 +303,22 @@ export default function Landing() {
 
         <div className="relative z-10 max-w-5xl mx-auto px-6 md:px-12 text-center">
           <div className="inline-flex items-center justify-center gap-3 mb-10 opacity-0 animate-[fadeIn_0.8s_0.2s_forwards]" style={{ animation: "fadeIn 0.8s 0.2s forwards" }}>
-            <span className={`text-xs tracking-widest uppercase font-body ${isDark ? "text-white/40" : "text-[#0a0a0a]/50"}`}>TRUSTED BY GROWING BRANDS</span>
+            <span className={`text-xs tracking-widest uppercase font-body ${isDark ? "text-white/40" : "text-[#0a0a0a]/50"}`}>Backed by Y‑Combinator</span>
             <span className={`inline-flex items-center gap-2 px-4 py-1 rounded-full ${isDark ? "bg-white/5 text-white/40" : "bg-black/5 text-[#0a0a0a]/60"} text-xs tracking-widest uppercase`}>
               <span className="w-1 h-1 rounded-full bg-[#f97316]" />
-              DATA-DRIVEN MARKETING
+              Trusted, Real-time Data
             </span>
           </div>
           <h1 className="font-display font-semibold text-5xl md:text-7xl lg:text-[5.5rem] leading-[1.05] tracking-tight mb-8" style={{ animation: "fadeUp 1s 0.35s both" }}>
-            <span className={`block ${isDark ? "text-white" : "text-[#0a0a0a]"}`}>Data-Driven Marketing.</span>
-            <span className={`block ${isDark ? "text-white/70" : "text-[#0a0a0a]/70"}`}>Smarter Brand <span className="text-[#f97316]">Growth</span>.</span>
+            <span className={`block ${isDark ? "text-white" : "text-[#0a0a0a]"}`}>Real-time Data.</span>
+            <span className={`block ${isDark ? "text-white/70" : "text-[#0a0a0a]/70"}`}>Smarter <span className="text-[#f97316]">Decisions</span>.</span>
           </h1>
           <p className={`font-body font-light ${isDark ? "text-white/40" : "text-[#0a0a0a]/40"} text-base md:text-lg max-w-xl mx-auto mb-12 leading-relaxed tracking-wide`} style={{ animation: "fadeUp 1s 0.55s both" }}>
-            Instantly scale your brand with strategic marketing, creative campaigns, and performance-driven data that convert audiences into customers.
+            Instantly enrich your apps, sales, and research with accurate, up-to-the-second company and people data.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4" style={{ animation: "fadeUp 1s 0.7s both" }}>
             <button onClick={() => scrollTo("connect")} className="bg-gradient-to-r from-[#f97316] to-[#fb923c] text-black font-body font-semibold tracking-widest uppercase text-sm px-10 py-4 rounded-full shadow-lg shadow-[#f97316]/20 hover:shadow-[#f97316]/35 transition-all duration-300">
-              View Our Services
+              Start Your Free Trial
             </button>
           </div>
         </div>
@@ -384,7 +384,7 @@ export default function Landing() {
       >
         <div className="mb-16 md:mb-20">
           <p className="font-body text-[#f97316]/70 text-xs tracking-[0.4em] uppercase mb-4">The People</p>
-          <h2 className="font-display font-light text-4xl md:text-6xl" style={{ color: isDark ? "rgba(255, 255, 255, 0.7)" : "rgba(0, 0, 0, 0.7)" }} leading-tight>
+          <h2 className="font-display font-light text-4xl md:text-6xl leading-tight" style={{ color: isDark ? "rgba(255, 255, 255, 0.7)" : "rgba(0, 0, 0, 0.7)" }}>
             Meet the<br /><em className="gold">Minds Behind</em>
           </h2>
         </div>
@@ -451,7 +451,7 @@ export default function Landing() {
           <h2 className="font-display font-light text-4xl md:text-6xl leading-tight mb-6 dark:text-white dark:opacity-90" style={{color: isDark ? "white" : "rgba(0, 0, 0, 0.9)"}}>
             Let&apos;s Create<br /><em className="gold">Something Great</em>
           </h2>
-          <p className={`font-body ${isDark ? "text-white/70" : "text-[#0a0a0a]/70"} text-sm group-hover:${isDark ? "text-white" : "text-[#f97316]"} transition-colors duration-300 mb-4`} text-sm leading-relaxed mb-10 max-w-sm>
+          <p className={`font-body text-sm leading-relaxed mb-10 max-w-sm ${isDark ? "text-white/70" : "text-[#0a0a0a]/70"} group-hover:${isDark ? "text-white" : "text-[#f97316]"} transition-colors duration-300`}>
               Ready to transform your brand? Reach out through any of our channels and a member of the Lyvera team will respond within 24 hours.
             </p>
             <div className="flex flex-col gap-3">
@@ -500,7 +500,7 @@ export default function Landing() {
       <footer className="border-t border-white/5 py-10 px-6 md:px-12">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 font-body">
           <span className="font-display text-xl font-light tracking-widest gold">LYVERA</span>
-          <p className={`${isDark ? "text-white/50" : "text-[#0a0a0a]/6re0"} text-xs tracking-widest text-center`}>
+          <p className={`${isDark ? "text-white/50" : "text-[#0a0a0a]/60"} text-xs tracking-widest text-center`}>
             © {new Date().getFullYear()} Lyvera Marketing Services. All rights reserved.
           </p>
           <div className="flex gap-4">
