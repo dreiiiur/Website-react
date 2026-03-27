@@ -265,7 +265,7 @@ export default function Landing() {
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 font-body ${scrolled ? (isDark ? "bg-[#0a0a0a]/95 border-b border-white/10" : "bg-white/95 border-b border-slate-200/60") : (isDark ? "bg-[#0a0a0a]/90 border-b border-white/5" : "bg-white/90 border-b border-slate-200/40")}`}>
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-5 flex items-center justify-between">
           <button onClick={() => scrollTo("hero")} className="flex items-center gap-2 group">
-            <img src={isDark ? "/src/Assets/images/splashlogo.png" : "/src/Assets/images/logoforlight.png"} className="w-full h-8" alt="Lyvera logo" />
+            <img src={isDark ? "/team/logos/splashlogo.png" : "/team/logos/logoforlight.png"} className="w-full h-8" alt="Lyvera logo" />
           </button>
           <div className="hidden md:flex items-center gap-4">
             
@@ -579,7 +579,7 @@ export default function Landing() {
       {/* FOOTER */}
       <footer className="border-t border-white/5 py-10 px-6 md:px-12">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 font-body">
-          <img src={isDark ? "/src/Assets/images/splashlogo.png" : "/src/Assets/images/logoforlight.png"} className="w-16 h-8" alt="Lyvera logo" />
+          <img src={isDark ? "/team/logos/splashlogo.png" : "/team/logos/logoforlight.png"} className="w-16 h-8" alt="Lyvera logo" />
           <p className={`${isDark ? "text-white/50" : "text-[#0a0a0a]/60"} text-xs tracking-widest text-center`}>
             © {new Date().getFullYear()} Lyvera Marketing Services. All rights reserved.
           </p>
