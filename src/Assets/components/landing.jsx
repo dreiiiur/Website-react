@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
+import Portfolio from "./portfolio";
 
-const NAV_LINKS = ["Services", "Team", "Connect"];
+const NAV_LINKS = ["Services", "Team", "Portfolio"];
 
 const SERVICES = [
   {
@@ -41,13 +42,46 @@ const SERVICES = [
   },
 ];
 
-const TEAM = [
+const PORTFOLIO_ITEMS = [
   {
-    name: "Ted Bamo",
-    role: "CEO & Founder",
-    img: "/team/SirTed.png",
-    quote: "Marketing is the art of telling stories that matter.",
+    title: "Brand Strategy",
+    desc: "We craft compelling brand identities that resonate deeply with your target audience and set you apart from the competition.",
+    img: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600&q=80",
+    tag: "01",
   },
+  {
+    title: "Digital Marketing",
+    desc: "Data-driven campaigns across all digital channels — SEO, paid ads, email, and beyond — built to convert and retain.",
+    img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80",
+    tag: "02",
+  },
+  {
+    title: "Content Creation",
+    desc: "Scroll-stopping content crafted by experts — from video scripts to blog articles — that builds authority and drives engagement.",
+    img: "https://images.unsplash.com/photo-1542744094-24638eff58bb?w=600&q=80",
+    tag: "03",
+  },
+  {
+    title: "Social Media Management",
+    desc: "Full-service social presence management. We grow your community, spark conversations, and turn followers into loyal customers.",
+    img: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&q=80",
+    tag: "04",
+  },
+  {
+    title: "Analytics & Reporting",
+    desc: "Crystal-clear dashboards and monthly reports that translate complex data into decisions that move the needle.",
+    img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80",
+    tag: "05",
+  },
+  {
+    title: "Creative Campaigns",
+    desc: "Bold, culturally-tuned campaign concepts that cut through the noise and leave a lasting impression on your market.",
+    img: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&q=80",
+    tag: "06",
+  },
+];
+
+const TEAM = [
   {
     name: "Siouxie Gail Say",
     role: "Creative Director",
@@ -55,38 +89,44 @@ const TEAM = [
     quote: "Every click is a conversation waiting to happen.",
   },
   {
+    name: "Jerome Salazar",
+    role: "Marketing Manager",
+    img: "/team/jerome.jpg",
+    quote: "Marketing is the art of telling stories that matter.",
+  },
+  {
     name: "Brix Fiesta",
-    role: "Art Director",
+    role: "Head of Production Team",
     img: "/team/brixfiesta.png",
     quote: "Great content doesn't interrupt — it invites.",
   },
   {
     name: "Andrei Poma",
-    role: "Web Developer / UI/UX Designer",
+    role: "Web Developer / Designer",
     img: "/team/andrei.png",
     quote: "Numbers don't lie. They tell your best story.",
   },
   {
     name: "Edric Dacumos",
-    role: "Video Editor / Motion Designer",
+    role: "Production",
     img: "/team/edric.png",
     quote: "Community is the new currency of brands.",
   },
   {
     name: "Aldrin Dela Cruz",
-    role: "Video Editor / Motion Designer",
+    role: "Production",
     img: "/team/aldrin.png",
     quote: "Community is the new currency of brands.",
   },
   {
     name: "Brix Aldrin Macapagal",
-    role: "Video Editor / Motion Designer",
+    role: "Production",
     img: "/team/brixaldrin.png",
     quote: "Community is the new currency of brands.",
   },
     {
     name: "Jan Lorenz Cortez",
-    role: "Video Editor / Motion Designer",
+    role: "Production",
     img: "/team/janjan.png",
     quote: "Community is the new currency of brands.",
   },
@@ -96,7 +136,7 @@ const SOCIALS = [
   {
     name: "Instagram",
     handle: "@lyveramarketing",
-    href: "#",
+    href: "https://www.instagram.com/lyveramarketingservices/",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-6 h-6">
         <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
@@ -105,7 +145,8 @@ const SOCIALS = [
       </svg>
     ),
   },
-  {
+
+  /*{
     name: "LinkedIn",
     handle: "Lyvera Marketing",
     href: "#",
@@ -114,12 +155,13 @@ const SOCIALS = [
         <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z" />
         <circle cx="4" cy="4" r="2" />
       </svg>
-    ),
-  },
+    )),
+  },*/
+
   {
     name: "Facebook",
     handle: "Lyvera Marketing Services",
-    href: "#",
+    href: "https://www.facebook.com/profile.php?id=61582517682969",
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
         <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
@@ -128,8 +170,8 @@ const SOCIALS = [
   },
   {
     name: "TikTok",
-    handle: "@lyvera",
-    href: "#",
+    handle: "@lyveramarketingservices",
+    href: "https://www.tiktok.com/@lyveramarketingservices",
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
         <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.14 8.14 0 0 0 4.77 1.52V6.76a4.85 4.85 0 0 1-1-.07z" />
@@ -137,12 +179,12 @@ const SOCIALS = [
     ),
   },
   {
-    name: "X (Twitter)",
-    handle: "@lyveramktg",
-    href: "#",
+    name: "Gmail",
+    handle: "lyvera.2025@gmail.com",
+    href: "mailto:lyvera.2025@gmail.com",
     icon: (
-      <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+      <svg viewBox="0 0 24 24" className="w-6 h-6">
+        <path fill="currentColor" d="M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.5l-8 5-8-5V6h16zM4 18V8.3l8 5 8-5V18H4z"/>
       </svg>
     ),
   },
@@ -151,7 +193,7 @@ const SOCIALS = [
 export default function Landing() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [teamIdx, setTeamIdx] = useState(0);
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState("light");
   const isDark = theme === "dark";
   const [scrolled, setScrolled] = useState(false);
   const [visibleSections, setVisibleSections] = useState({});
@@ -175,7 +217,9 @@ export default function Landing() {
     Object.values(sectionRefs.current).forEach((el) => el && obs.observe(el));
     return () => obs.disconnect();
   }, []);
-
+  const handlePortfolioClick = () => {
+    window.location.href = "/portfolio";
+  };
   const setRef = (id) => (el) => {
     sectionRefs.current[id] = el;
   };
@@ -221,8 +265,7 @@ export default function Landing() {
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 font-body ${scrolled ? (isDark ? "bg-[#0a0a0a]/95 border-b border-white/10" : "bg-white/95 border-b border-slate-200/60") : (isDark ? "bg-[#0a0a0a]/90 border-b border-white/5" : "bg-white/90 border-b border-slate-200/40")}`}>
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-5 flex items-center justify-between">
           <button onClick={() => scrollTo("hero")} className="flex items-center gap-2 group">
-            <span className="font-display text-2xl font-light tracking-widest gold">LYVERA</span>
-            <span className={`${isDark ? "text-white/30" : "text-slate-500"} text-xs tracking-[0.3em] uppercase hidden sm:block mt-1`}>Marketing</span>
+            <img src={isDark ? "/src/Assets/images/splashlogo.png" : "/src/Assets/images/logoforlight.png"} className="w-full h-8" alt="Lyvera logo" />
           </button>
           <div className="hidden md:flex items-center gap-4">
             
@@ -232,8 +275,9 @@ export default function Landing() {
                   {l}
                 </button> 
               ))}
-              <button onClick={() => scrollTo("connect")} className="border rounded-full gold-border bg-[#f97316] text-black text-sm tracking-widest uppercase px-6 py-2.5 hover:bg-[#fb923c] transition-all duration-300">
-                Get Started
+             
+              <button onClick={() => scrollTo("connect")} className="border rounded-full gold-border bg-[#f97316] text-white font-body text-sm tracking-widest uppercase px-6 py-2.5 hover:bg-[#fb923c] transition-all duration-300">
+                Connect with Us
               </button>
               <button
               onClick={() => setTheme(isDark ? "light" : "dark")}
@@ -332,7 +376,7 @@ export default function Landing() {
           @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
           @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: none; } }
         `}</style>
-      </section>
+      </section>  
 
       {/* SERVICES */}
       <section
@@ -340,10 +384,10 @@ export default function Landing() {
         ref={setRef("services")}
         className={`py-28 md:py-36 px-6 md:px-12 max-w-7xl mx-auto fade-up ${visibleSections["services"] ? "visible" : ""}`}
       >
-        <div className="mb-16 md:mb-20 fade-up d1">
-          <p className="font-body text-[#f97316]/70 text-xs tracking-[0.4em] uppercase mb-4">What We Do</p>
-          <h2 className="font-display font-light text-4xl md:text-6xl text-[#0a0a0a]/90 leading-tight">
-            Services Built<br /><em className="gold">for Results</em>
+        <div className="mb-16 md:mb-20">
+          <p className={`font-body text-xs tracking-[0.4em] uppercase mb-4 ${isDark ? "text-white/70" : "text-[#f97316]/70"}`}>What We Do</p>
+          <h2 className="font-display font-light text-4xl md:text-6xl leading-tight">
+            Services Built<br /><em className={`gold ${isDark ? "text-[#f97316]" : "text-[#fb923c]"}`}>for Results</em>
           </h2>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -376,6 +420,39 @@ export default function Landing() {
         <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       </div>
 
+      {/* <!-- PORTFOLIO --> */}
+      {/* <section id="portfolio" className={`py-28 md:py-36 px-6 md:px-12 max-w-7xl mx-auto fade-up ${visibleSections["portfolio"] ? "visible" : ""}`} ref={setRef("portfolio")}>
+        <div className="mb-16 md:mb-20">
+          <p className="font-body text-[#f97316]/70 text-xs tracking-[0.4em] uppercase mb-4">Portfolio</p>
+          <h2 className="font-display font-light text-4xl md:text-6xl leading-tight" style={{ color: isDark ? "rgba(255, 255, 255, 0.7)" : "rgba(0, 0, 0, 0.7)" }}>
+            Latest<br /><em className="gold">Projects</em>
+          </h2>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {PORTFOLIO_ITEMS.map((p, i) => (
+            <div
+              key={p.title}
+              className={`card-hover group relative overflow-hidden ${isDark ? "bg-[#111010] border border-white/5" : "bg-white border border-slate-200/40"} cursor-default fade-up d${Math.min(i + 1, 4)} ${visibleSections["portfolio"] ? "visible" : ""}`}
+              style={{ transitionDelay: `${0.08 * i}s` }}
+            >
+              <div className="relative h-48 overflow-hidden">
+                <img src={p.img} alt={p.title} className="w-full h-full object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-700" />
+                <div className={`absolute inset-0 bg-gradient-to-t ${isDark ? "from-[#111010] via-[#111010]/20" : "from-white/70 via-white/40"} to-transparent`} />
+                <span className="absolute top-4 right-4 font-display text-orange-400/40 text-3xl font-light">{p.tag}</span>
+              </div>
+              <div className="p-6">
+                <h3 className={`font-display text-xl font-light ${isDark ? "text-white" : "text-[#0a0a0a]"} mb-2 group-hover:text-orange-400 transition-colors duration-300`}>{p.title}</h3>
+                <p className={`font-body ${isDark ? "text-white/40" : "text-[#0a0a0a]/60"} text-sm leading-relaxed`}>{p.desc}</p>
+                <div className="mt-5 flex items-center gap-2 text-orange-400/60 group-hover:text-orange-400 transition-colors duration-300">
+                  <span className="font-body text-xs tracking-widest uppercase">Explore</span>
+                  <svg className="w-3 h-3 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section> */}
+      
       {/* TEAM */}
       <section
         id="team"
@@ -429,7 +506,7 @@ export default function Landing() {
             <button onClick={nextTeam} className="w-12 h-12 border border-white/10 dark:border-[#f97316]/20 flex items-center justify-center text-white/40 dark:text-[#f97316]/50 hover:border-[#f97316]/50 hover:text-[#f97316] transition-all duration-300">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
             </button>
-            <span className="font-body text-white/20 text-xs ml-2 tracking-widest">{String(teamIdx + 1).padStart(2, "0")} / {String(TEAM.length).padStart(2, "0")}</span>
+            <span className="font-body text-white/20  text-xs ml-2 tracking-widest">{String(teamIdx + 1).padStart(2, "0")} / {String(TEAM.length).padStart(2, "0")}</span>
           </div>
         </div>
       </section>
@@ -454,12 +531,15 @@ export default function Landing() {
           <p className={`font-body text-sm leading-relaxed mb-10 max-w-sm ${isDark ? "text-white/70" : "text-[#0a0a0a]/70"} group-hover:${isDark ? "text-white" : "text-[#f97316]"} transition-colors duration-300`}>
               Ready to transform your brand? Reach out through any of our channels and a member of the Lyvera team will respond within 24 hours.
             </p>
-            <div className="flex flex-col gap-3">
-              {SOCIALS.map((s) => (
+            <div className="flex flex-col gap-3 target-blank">
+              {SOCIALS.map((s) => 
+               (
                 <a
                   key={s.name}
                   href={s.href}
-                  className={`group flex items-center gap-4 p-4 border ${isDark ? "border-white/5 bg-[#111010] hover:border-[#f97316]/30 hover:bg-[#14120e]" : "border-slate-200/40 bg-white hover:border-[#f97316]/30 hover:bg-white/90"} transition-all duration-300`}
+                  className={`group flex items-center gap-4 p-4 border ${isDark ? "border-white/5 bg-[#111010] hover:border-[#f97316]/30 hover:bg-[#14120e]" : "border-slate-40 bg-white hover:border-[#f97316]/30 hover:bg-white/90"} transition-all duration-300`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <div className={`${isDark ? "text-white/30" : "text-[#0a0a0a]/50"} group-hover:text-[#f97316] transition-colors duration-300`}>{s.icon}</div>
                   <div>
@@ -473,24 +553,24 @@ export default function Landing() {
           </div>
 
           {/* Contact Form */}
-          <div className={`border ${isDark ? "border-white/5 bg-[#111010]" : "border-slate-200/40 bg-white"} p-8 md:p-10`}>
+          <div className={`border ${isDark ? "border-white/5 bg-[#111010]" : "border-slate-40 bg-white"} p-8 md:p-10`}>
             <h3 className={`font-display text-2xl font-light ${isDark ? "text-white/80" : "text-[#0a0a0a]/90"} mb-7`}>Send a Message</h3>
             <div className="flex flex-col gap-5 font-body">
               <div>
                 <label className={`text-xs tracking-widest uppercase ${isDark ? "text-white/30" : "text-[#0a0a0a]/50"} block mb-2`}>Full Name</label>
-                <input type="text" placeholder="Your name" className={`w-full ${isDark ? "bg-[#0a0a0a] border border-white/10 text-white/70 placeholder-white/20" : "bg-white border border-slate-200/40 text-[#0a0a0a]/80 placeholder-[#6b7280]"} px-4 py-3 text-sm focus:outline-none focus:border-[#f97316]/50 transition-colors duration-200`} />
+                <input type="text" placeholder="Your name" className={`w-full ${isDark ? "bg-[#0a0a0a] border border-white/10 text-white/70 placeholder-white/20" : "bg-white border border-slate-40 text-[#0a0a0a]/80 placeholder-[#6b7280]"} px-4 py-3 text-sm focus:outline-none focus:border-[#f97316]/50 transition-colors duration-200`} />
               </div>
               <div>
                 <label className={`text-xs tracking-widest uppercase ${isDark ? "text-white/30" : "text-[#0a0a0a]/50"} block mb-2`}>Email</label>
-                <input type="email" placeholder="you@company.com" className={`w-full ${isDark ? "bg-[#0a0a0a] border border-white/10 text-white/70 placeholder-white/20" : "bg-white border border-slate-200/40 text-[#0a0a0a]/80 placeholder-[#6b7280]"} px-4 py-3 text-sm focus:outline-none focus:border-[#f97316]/50 transition-colors duration-200`} />
+                <input type="email" placeholder="you@company.com" className={`w-full ${isDark ? "bg-[#0a0a0a] border border-white/10 text-white/70 placeholder-white/20" : "bg-white border border-slate-40 text-[#0a0a0a]/80 placeholder-[#6b7280]"} px-4 py-3 text-sm focus:outline-none focus:border-[#f97316]/50 transition-colors duration-200`} />
               </div>
               <div>
                 <label className={`text-xs tracking-widest uppercase ${isDark ? "text-white/30" : "text-[#0a0a0a]/50"} block mb-2`}>Message</label>
-                <textarea rows={4} placeholder="Tell us about your project..." className={`w-full ${isDark ? "bg-[#0a0a0a] border border-white/10 text-white/70 placeholder-white/20" : "bg-white border border-slate-200/40 text-[#0a0a0a]/80 placeholder-[#6b7280]"} px-4 py-3 text-sm focus:outline-none focus:border-[#f97316]/50 transition-colors duration-200 resize-none`} />
+                <textarea rows={4} placeholder="Tell us about your project..." className={`w-full ${isDark ? "bg-[#0a0a0a] border border-white/10 text-white/70 placeholder-white/20" : "bg-white border border-slate-40 text-[#0a0a0a]/80 placeholder-[#6b7280]"} px-4 py-3 text-sm focus:outline-none focus:border-[#f97316]/50 transition-colors duration-200 resize-none`} />
               </div>
-              <button className="bg-[#f97316] text-black font-medium tracking-widest uppercase text-sm px-8 py-4 hover:bg-[#fb923c] transition-colors duration-300 mt-1">
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=lyvera.2025@gmail.com&su=Project%20Inquiry&body=Hello%20Lyvera,%0D%0A%0D%0A%20I%20am%20Interested%20in%20your%20services.%0D%0A%0D%0A%20Please%20get%20back%20to%20me%20at%20your%20earliest%20convenience." className="bg-[#f97316] text-black font-medium tracking-widest uppercase text-sm px-8 py-4 hover:bg-[#fb923c] transition-colors duration-300 mt-1">
                 Send Message →
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -499,13 +579,14 @@ export default function Landing() {
       {/* FOOTER */}
       <footer className="border-t border-white/5 py-10 px-6 md:px-12">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 font-body">
-          <span className="font-display text-xl font-light tracking-widest gold">LYVERA</span>
+          <img src={isDark ? "/src/Assets/images/splashlogo.png" : "/src/Assets/images/logoforlight.png"} className="w-16 h-8" alt="Lyvera logo" />
           <p className={`${isDark ? "text-white/50" : "text-[#0a0a0a]/60"} text-xs tracking-widest text-center`}>
             © {new Date().getFullYear()} Lyvera Marketing Services. All rights reserved.
           </p>
           <div className="flex gap-4">
             {SOCIALS.slice(0, 3).map((s) => (
-              <a key={s.name} href={s.href} className="text-[#0a0a0a]/30 hover:text-[#f97316] transition-colors duration-200">{s.icon}</a>
+              
+              <a target="_blank" rel="noopener noreferrer" targetkey={s.name} href={s.href} className={`text-[#0a0a0a]/30 hover:text-[#f97316] transition-colors duration-200 ${isDark ? "text-white/50 hover:text{#f97316}" : "hover:text-[#0a0a0a]"}`}>{s.icon}</a>
             ))}
           </div>
         </div>

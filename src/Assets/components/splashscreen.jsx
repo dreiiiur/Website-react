@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../images/logo.svg';
+import logo from '../images/splashlogo.png';
 
 const Splashscreen = () => {
   const styles = `
@@ -35,6 +35,7 @@ const Splashscreen = () => {
       height: auto;
       animation: splashAnimation 3s ease-in-out forwards;
       transform-style: preserve-3d;
+      backface-visibility: hidden;
     }
   `;
 

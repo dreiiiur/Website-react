@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Landing from "./Assets/components/landing.jsx";
 import Splashscreen from "./Assets/components/splashscreen.jsx";
+import Portfolio from "./Assets/components/portfolio.jsx";
 
 export default function App() {
   const [showSplash, setShowSplash] = useState(true);
@@ -10,5 +11,9 @@ export default function App() {
     return () => clearTimeout(timer);
   }, []);
 
-  return showSplash ? <Splashscreen /> : <Landing />;
+  return showSplash ? 
+  <Splashscreen /> : 
+  <Landing /> ||
+  <Portfolio />;
+  
 }
