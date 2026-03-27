@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../images/splashlogo.png';
+import logo from '/team/logos/splashlogo1.png';
 
 const Splashscreen = () => {
   const styles = `

@@ -9,36 +9,42 @@ const SERVICES = [
     desc: "We craft compelling brand identities that resonate deeply with your target audience and set you apart from the competition.",
     img: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600&q=80",
     tag: "01",
+    href: "https://www.facebook.com/profile.php?id=61582517682969",
   },
   {
     title: "Digital Marketing",
     desc: "Data-driven campaigns across all digital channels — SEO, paid ads, email, and beyond — built to convert and retain.",
     img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80",
     tag: "02",
+    href: "https://www.facebook.com/profile.php?id=61582517682969",
   },
   {
     title: "Content Creation",
     desc: "Scroll-stopping content crafted by experts — from video scripts to blog articles — that builds authority and drives engagement.",
     img: "https://images.unsplash.com/photo-1542744094-24638eff58bb?w=600&q=80",
     tag: "03",
+    href: "https://www.facebook.com/profile.php?id=61582517682969",
   },
   {
     title: "Social Media Management",
     desc: "Full-service social presence management. We grow your community, spark conversations, and turn followers into loyal customers.",
     img: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&q=80",
     tag: "04",
+    href: "https://www.facebook.com/profile.php?id=61582517682969",
   },
   {
     title: "Analytics & Reporting",
     desc: "Crystal-clear dashboards and monthly reports that translate complex data into decisions that move the needle.",
     img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80",
     tag: "05",
+    href: "https://www.facebook.com/profile.php?id=61582517682969",
   },
   {
     title: "Creative Campaigns",
     desc: "Bold, culturally-tuned campaign concepts that cut through the noise and leave a lasting impression on your market.",
     img: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&q=80",
     tag: "06",
+    href: "https://www.facebook.com/profile.php?id=61582517682969",
   },
 ];
 
@@ -249,23 +255,23 @@ export default function Landing() {
         .card-hover { transition: transform 0.35s cubic-bezier(.22,1,.36,1), box-shadow 0.35s; }
         .card-hover:hover { transform: translateY(-6px); box-shadow: 0 24px 60px rgba(0,0,0,0.5); }
         .underline-anim { position: relative; }
-        .underline-anim::after { content:''; position:absolute; left:0; bottom:-2px; width:0; height:1px; background:#f97316; transition: width 0.3s ease; }
+        .underline-anim::after { content:''; position:absolute; left:0; bottom:-2px; width:0; height:1px; background:#0131ff; transition: width 0.3s ease; }
         .underline-anim:hover::after { width:100%; }
         .grain { background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); }
-        .gold { color: #f97316; }
-        .gold-border { border-color: #f97316; }
-        .gold-bg { background-color: #f97316; }
+        .b { color: #0131ff; }
+        .gold-border { border-color: #0131ff; }
+        .gold-bg { background-color: #0131ff; }
         .slider-track { display: flex; transition: transform 0.6s cubic-bezier(.27,1,.46,2); }
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: #f5f5f5; }
-        ::-webkit-scrollbar-thumb { background: #f9731644; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb { background: #0131ff; border-radius: 3px; }
       `}</style>
 
       {/* NAV */}
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 font-body ${scrolled ? (isDark ? "bg-[#0a0a0a]/95 border-b border-white/10" : "bg-white/95 border-b border-slate-200/60") : (isDark ? "bg-[#0a0a0a]/90 border-b border-white/5" : "bg-white/90 border-b border-slate-200/40")}`}>
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-5 flex items-center justify-between">
           <button onClick={() => scrollTo("hero")} className="flex items-center gap-2 group">
-            <img src={isDark ? "/team/logos/splashlogo.png" : "/team/logos/logoforlight.png"} className="w-full h-8" alt="Lyvera logo" />
+            <img src={isDark ? "/team/logos/splashlogo1.png" : "/team/logos/logoforlight1.png"} className="w-full h-8" alt="Lyvera logo" />
           </button>
           <div className="hidden md:flex items-center gap-4">
             
@@ -276,7 +282,7 @@ export default function Landing() {
                 </button> 
               ))}
              
-              <button onClick={() => scrollTo("connect")} className="border rounded-full gold-border bg-[#f97316] text-white font-body text-sm tracking-widest uppercase px-6 py-2.5 hover:bg-[#fb923c] transition-all duration-300">
+              <button onClick={() => scrollTo("connect")} className="border rounded-full bg-[#0131ff] text-white font-body text-sm tracking-widest uppercase px-6 py-2.5 hover:bg-[#3857e2] transition-all duration-300">
                 Connect with Us
               </button>
               <button
@@ -314,21 +320,21 @@ export default function Landing() {
       {/* HERO */}
       <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className={`absolute inset-0 ${isDark ? "bg-gradient-to-br from-[#04050a] via-[#05060d] to-[#000]" : "bg-gradient-to-br from-[#f3f4f6] via-[#e5e7eb] to-[#f9fafb]"}`} />
-        <div className={`absolute inset-0 ${isDark ? "bg-[radial-gradient(circle_at_top,rgba(249,115,22,0.35),transparent_55%)] mix-blend-screen" : "bg-[radial-gradient(circle_at_top,rgba(249,115,22,0.25),transparent_55%)]"}`} />
+        <div className={`absolute inset-0 ${isDark ? "bg-[radial-gradient(circle_at_top,rgba(1,49,255,0.35),transparent_55%)] mix-blend-screen" : "bg-[radial-gradient(circle_at_top,rgba(1,49,255,0.25),transparent_55%)]"}`} />
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute -left-16 top-24 w-72 h-72 rounded-full bg-[#f97316]/10 blur-3xl" />
-          <div className="absolute right-10 top-32 w-56 h-56 rounded-full bg-[#f97316]/15 blur-3xl" />
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-[#f97316]/08 blur-3xl" />
+          <div className="absolute -left-16 top-24 w-72 h-72 rounded-full bg-[#0131ff]/10 blur-3xl" />
+          <div className="absolute right-10 top-32 w-56 h-56 rounded-full bg-[#0131ff]/15 blur-3xl" />
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-[#0131ff]/08 blur-3xl" />
           <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-            <line x1="10" y1="10" x2="80" y2="25" stroke="rgba(249,115,22,0.2)" strokeWidth="0.3" />
-            <line x1="15" y1="70" x2="85" y2="60" stroke="rgba(249,115,22,0.15)" strokeWidth="0.3" />
-            <circle cx="10" cy="10" r="1.5" fill="rgba(249,115,22,0.6)" />
-            <circle cx="80" cy="25" r="1.2" fill="rgba(249,115,22,0.5)" />
-            <circle cx="15" cy="70" r="1.2" fill="rgba(249,115,22,0.4)" />
-            <circle cx="85" cy="60" r="1.2" fill="rgba(249,115,22,0.4)" />
+            <line x1="10" y1="10" x2="80" y2="25" stroke="rgba(1,49,255,0.2)" strokeWidth="0.3" />
+            <line x1="15" y1="70" x2="85" y2="60" stroke="rgba(1,49,255,0.15)" strokeWidth="0.3" />
+            <circle cx="10" cy="10" r="1.5" fill="rgba(1,49,255,0.6)" />
+            <circle cx="80" cy="25" r="1.2" fill="rgba(1,49,255,0.5)" />
+            <circle cx="15" cy="70" r="1.2" fill="rgba(1,49,255,0.4)" />
+            <circle cx="85" cy="60" r="1.2" fill="rgba(1,49,255,0.4)" />
           </svg>
         </div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-[#f97316]/4 blur-[120px] pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-[#0131ff]/4 blur-[120px] pointer-events-none" />
 
         {/* Floating images */}
         <img
@@ -342,26 +348,26 @@ export default function Landing() {
           className="hidden lg:block absolute -right-32 top-48 w-96 rounded-3xl shadow-2xl object-cover transform -rotate-6 opacity-90"
         />
 
-        <div className="absolute top-20 right-20 w-px h-40 bg-gradient-to-b from-transparent via-orange-500/30 to-transparent hidden lg:block" />
-        <div className="absolute bottom-32 left-16 w-40 h-px bg-gradient-to-r from-transparent via-orange-500/30 to-transparent hidden lg:block" />
+        <div className="absolute top-20 right-20 w-px h-40 bg-gradient-to-b from-transparent via-blue-500/30 to-transparent hidden lg:block" />
+        <div className="absolute bottom-32 left-16 w-40 h-px bg-gradient-to-r from-transparent via-blue-500/30 to-transparent hidden lg:block" />
 
         <div className="relative z-10 max-w-5xl mx-auto px-6 md:px-12 text-center">
           <div className="inline-flex items-center justify-center gap-3 mb-10 opacity-0 animate-[fadeIn_0.8s_0.2s_forwards]" style={{ animation: "fadeIn 0.8s 0.2s forwards" }}>
             <span className={`text-xs tracking-widest uppercase font-body ${isDark ? "text-white/40" : "text-[#0a0a0a]/50"}`}>Digital Marketing</span>
             <span className={`inline-flex items-center gap-2 px-4 py-1 rounded-full ${isDark ? "bg-white/5 text-white/40" : "bg-black/5 text-[#0a0a0a]/60"} text-xs tracking-widest uppercase`}>
-              <span className="w-1 h-1 rounded-full bg-[#f97316]" />
+              <span className="w-1 h-1 rounded-full bg-[#0131ff]" />
               Trusted by 100+ brands
             </span>
           </div>
           <h1 className="font-display font-semibold text-5xl md:text-7xl lg:text-[5.5rem] leading-[1.05] tracking-tight mb-8" style={{ animation: "fadeUp 1s 0.35s both" }}>
             <span className={`block ${isDark ? "text-white" : "text-[#0a0a0a]"}`}>Grow Your Brand.</span>
-            <span className={`block ${isDark ? "text-white/70" : "text-[#0a0a0a]/70"}`}>Dominate <span className="text-[#f97316]">Digital</span>.</span>
+            <span className={`block ${isDark ? "text-white/70" : "text-[#0a0a0a]/70"}`}>Dominate <span className="text-[#0131ff]">Digital</span>.</span>
           </h1>
           <p className={`font-body font-light ${isDark ? "text-white/40" : "text-[#0a0a0a]/40"} text-base md:text-lg max-w-xl mx-auto mb-12 leading-relaxed tracking-wide`} style={{ animation: "fadeUp 1s 0.55s both" }}>
             Lyvera helps businesses grow through strategic branding, high-performance digital campaigns, and content that converts — so you can focus on running your business.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4" style={{ animation: "fadeUp 1s 0.7s both" }}>
-            <button onClick={() => scrollTo("connect")} className="bg-gradient-to-r from-[#f97316] to-[#fb923c] text-black font-body font-semibold tracking-widest uppercase text-sm px-10 py-4 rounded-full shadow-lg shadow-[#f97316]/20 hover:shadow-[#f97316]/35 transition-all duration-300">
+            <button onClick={() => scrollTo("connect")} className="bg-gradient-to-r from-[#0131ff] to-[#0131ff] text-white font-body font-semibold tracking-widest uppercase text-sm px-10 py-4 rounded-full shadow-lg shadow-[#0131ff]/20 hover:shadow-[#0131ff]/35 transition-all duration-300">
               Book A Call
             </button>
           </div>
@@ -385,9 +391,9 @@ export default function Landing() {
         className={`py-28 md:py-36 px-6 md:px-12 max-w-7xl mx-auto fade-up ${visibleSections["services"] ? "visible" : ""}`}
       >
         <div className="mb-16 md:mb-20">
-          <p className={`font-body text-xs tracking-[0.4em] uppercase mb-4 ${isDark ? "text-white/70" : "text-[#f97316]/70"}`}>What We Do</p>
+          <p className={`font-body text-xs tracking-[0.4em] uppercase mb-4 ${isDark ? "text-white/70" : "text-[#0131ff]/70"}`}>What We Do</p>
           <h2 className="font-display font-light text-4xl md:text-6xl leading-tight">
-            Services Built<br /><em className={`gold ${isDark ? "text-[#f97316]" : "text-[#fb923c]"}`}>for Results</em>
+            Services Built<br /><em className={`gold ${isDark ? "text-[#0131ff]" : "text-[#0131ff]"}`}>for Results</em>
           </h2>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -396,16 +402,18 @@ export default function Landing() {
               key={s.title}
               className={`card-hover group relative overflow-hidden ${isDark ? "bg-[#111010] border border-white/5" : "bg-white border border-slate-200/40"} cursor-default fade-up d${Math.min(i + 1, 4)} ${visibleSections["services"] ? "visible" : ""}`}
               style={{ transitionDelay: `${0.08 * i}s` }}
+
+              {...(s.href ? { onClick: () => window.open(s.href, "_blank") } : {} )}
             >
               <div className="relative h-48 overflow-hidden">
                 <img src={s.img} alt={s.title} className="w-full h-full object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-700" />
                 <div className={`absolute inset-0 bg-gradient-to-t ${isDark ? "from-[#111010] via-[#111010]/20" : "from-white/70 via-white/40"} to-transparent`} />
-                <span className="absolute top-4 right-4 font-display text-orange-400/40 text-3xl font-light">{s.tag}</span>
+                <span className="absolute top-4 right-4 font-display text-blue-400/40 text-3xl font-light">{s.tag}</span>
               </div>
               <div className="p-6">
-                <h3 className={`font-display text-xl font-light ${isDark ? "text-white" : "text-[#0a0a0a]"} mb-2 group-hover:text-orange-400 transition-colors duration-300`}>{s.title}</h3>
+                <h3 className={`font-display text-xl font-light ${isDark ? "text-white" : "text-[#0a0a0a]"} mb-2 group-hover:text-blue-400 transition-colors duration-300`}>{s.title}</h3>
                 <p className={`font-body ${isDark ? "text-white/40" : "text-[#0a0a0a]/60"} text-sm leading-relaxed`}>{s.desc}</p>
-                <div className="mt-5 flex items-center gap-2 text-orange-400/60 group-hover:text-orange-400 transition-colors duration-300">
+                <div className="mt-5 flex items-center gap-2 text-blue-400/60 group-hover:text-blue-400 transition-colors duration-300">
                   <span className="font-body text-xs tracking-widest uppercase">Explore</span>
                   <svg className="w-3 h-3 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
                 </div>
@@ -417,7 +425,7 @@ export default function Landing() {
 
       {/* DIVIDER */}
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+        <div className={`h-px ${isDark ? "bg-gradient-to-r from-transparent via-white/10 to-transparent" : "bg-gradient-to-r from-transparent via-black/10 to-transparent"}`} />
       </div>
 
       {/* <!-- PORTFOLIO --> */}
@@ -460,7 +468,7 @@ export default function Landing() {
         className={`py-28 md:py-36 px-6 md:px-12 max-w-7xl mx-auto fade-up ${visibleSections["team"] ? "visible" : ""}`}
       >
         <div className="mb-16 md:mb-20">
-          <p className="font-body text-[#f97316]/70 text-xs tracking-[0.4em] uppercase mb-4">The People</p>
+          <p className="font-body text-[#0131ff]/70 text-xs tracking-[0.4em] uppercase mb-4">The People</p>
           <h2 className="font-display font-light text-4xl md:text-6xl leading-tight" style={{ color: isDark ? "rgba(255, 255, 255, 0.7)" : "rgba(0, 0, 0, 0.7)" }}>
             Meet the<br /><em className="gold">Minds Behind</em>
           </h2>
@@ -474,7 +482,7 @@ export default function Landing() {
             const handleMouseMove = (e) => {
               const diffX = e.clientX - startX;
               const newTeamIdx = Math.round(startTeamIdx - diffX / (window.innerWidth / 3));
-              setTeamIdx(Math.max(0, Math.min(TEAM.length - 1, newTeamIdx)));
+              setTeamIdx(Math.max(0, Math.min(TEAM.length - 1, newTeamIdx))); 
             };
             const handleMouseUp = () => {
               window.removeEventListener("mousemove", handleMouseMove);
@@ -489,16 +497,16 @@ export default function Landing() {
                 <div
                   key={m.name}
                   onClick={() => setTeamIdx(i)}
-                  className={`card-hover flex-shrink-0 cursor-pointer transition-all duration-500 border ${isActive ? "border-orange-400/40 bg-[#14120e]" : "border-white/5 bg-white/5"} ${isDark ? "bg-[#14120e]" : "bg-white/5"}`}
+                  className={`card-hover flex-shrink-0 cursor-pointer transition-all duration-500 border ${isActive ? "border-blue-400/40 bg-[#14120e]" : "border-white/5 bg-white/5"} ${isDark ? "bg-[#14120e]" : "bg-white/5"}`}
                   style={{ width: "calc(33.33% - 13px)", minWidth: "260px" }}
                 >
                   <div className="relative h-64 overflow-hidden">
                     <img src={m.img} alt={m.name} className={`w-full h-full object-cover transition-all duration-700 ${isActive ? "opacity-90 scale-100" : "opacity-40 grayscale scale-105"}`} />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#14120e] via-transparent to-transparent" />
-                    {isActive && <div className="absolute top-4 left-4 w-1.5 h-1.5 rounded-full bg-[#f97316]" /> }
+                    {isActive && <div className="absolute top-4 left-4 w-1.5 h-1.5 rounded-full bg-[#0131ff]" /> }
                   </div>
                   <div className="p-6">
-                    <h3 className={`font-display text-xl font-light transition-colors duration-300 ${isActive ? "text-orange-400" : isDark ? "text-white/50" : "text-[#0a0a0a]/50"}`}>{m.name}</h3>
+                    <h3 className={`font-display text-xl font-light transition-colors duration-300 ${isActive ? "text-blue-400" : isDark ? "text-white/50" : "text-[#0a0a0a]/50"}`}>{m.name}</h3>
                     <p className={`font-body text-xs tracking-widest uppercase ${isDark ? "text-white/30" : "text-[#0a0a0a]/40"} mt-1 mb-4`}>{m.role}</p>
                     <p className={`font-display italic text-sm leading-relaxed transition-all duration-300 ${isActive ? (isDark ? "text-white/50" : "text-[#0a0a0a]/70") : (isDark ? "text-white/20" : "text-[#0a0a0a]/30")}`}>&quot;{m.quote}&quot;</p>
                   </div>
@@ -509,15 +517,15 @@ export default function Landing() {
 
           {/* Controls */}
           <div className="flex items-center gap-6 mt-10">
-            <button onClick={prevTeam} className="w-12 h-12 border border-white/20 dark:border-orange-400/20 flex items-center justify-center text-white/40 dark:text-orange-400 hover:border-orange-400/50 hover:text-orange-400 transition-all duration-300">
+            <button onClick={prevTeam} className="w-12 h-12 border border-white/20 dark:border-blue-400/20 flex items-center justify-center text-white/40 dark:text-blue-400 hover:border-blue-400/50 hover:text-blue-400 transition-all duration-300">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7" /></svg>
             </button>
             <div className="flex gap-2">
               {TEAM.map((_, i) => (
-                <button key={i} onClick={() => setTeamIdx(i)} className={`transition-all duration-300 rounded-full ${i === teamIdx ? "w-8 h-1.5 bg-[#f97316]" : "w-1.5 h-1.5 bg-black/20"}`} />
+                <button key={i} onClick={() => setTeamIdx(i)} className={`transition-all duration-300 rounded-full ${i === teamIdx ? "w-8 h-1.5 bg-[#0131ff]" : "w-1.5 h-1.5 bg-black/20"}`} />
               ))}
             </div>
-            <button onClick={nextTeam} className="w-12 h-12 border border-white/10 dark:border-[#f97316]/20 flex items-center justify-center text-white/40 dark:text-[#f97316]/50 hover:border-[#f97316]/50 hover:text-[#f97316] transition-all duration-300">
+            <button onClick={nextTeam} className="w-12 h-12 border border-white/10 dark:border-[#0131ff]/20 flex items-center justify-center text-white/40 dark:text-[#0131ff]/50 hover:border-[#0131ff]/50 hover:text-[#0131ff] transition-all duration-300">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
             </button>
             <span className="font-body text-white/20  text-xs ml-2 tracking-widest">{String(teamIdx + 1).padStart(2, "0")} / {String(TEAM.length).padStart(2, "0")}</span>
@@ -527,7 +535,7 @@ export default function Landing() {
 
       {/* DIVIDER */}
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+        <div className={`h-px ${isDark ? "bg-gradient-to-r from-transparent via-white/10 to-transparent" : "bg-gradient-to-r from-transparent via-black/10 to-transparent"}`} />
       </div>
 
       {/* CONNECT */}
@@ -538,11 +546,11 @@ export default function Landing() {
       >
         <div className="grid md:grid-cols-2 gap-16 items-start">
           <div>
-            <p className="font-body text-[#f97316]/70 text-xs tracking-[0.4em] uppercase mb-4">Get in Touch</p>
+            <p className="font-body text-[#0131ff]/70 text-xs tracking-[0.4em] uppercase mb-4">Get in Touch</p>
           <h2 className="font-display font-light text-4xl md:text-6xl leading-tight mb-6 dark:text-white dark:opacity-90" style={{color: isDark ? "white" : "rgba(0, 0, 0, 0.9)"}}>
             Let&apos;s Create<br /><em className="gold">Something Great</em>
           </h2>
-          <p className={`font-body text-sm leading-relaxed mb-10 max-w-sm ${isDark ? "text-white/70" : "text-[#0a0a0a]/70"} group-hover:${isDark ? "text-white" : "text-[#f97316]"} transition-colors duration-300`}>
+          <p className={`font-body text-sm leading-relaxed mb-10 max-w-sm ${isDark ? "text-white/70" : "text-[#0a0a0a]/70"} group-hover:${isDark ? "text-white" : "text-[#0131ff]"} transition-colors duration-300`}>
               Ready to transform your brand? Reach out through any of our channels and a member of the Lyvera team will respond within 24 hours.
             </p>
             <div className="flex flex-col gap-3 target-blank">
@@ -551,16 +559,16 @@ export default function Landing() {
                 <a
                   key={s.name}
                   href={s.href}
-                  className={`group flex items-center gap-4 p-4 border ${isDark ? "border-white/5 bg-[#111010] hover:border-[#f97316]/30 hover:bg-[#14120e]" : "border-slate-40 bg-white hover:border-[#f97316]/30 hover:bg-white/90"} transition-all duration-300`}
+                  className={`group flex items-center gap-4 p-4 border ${isDark ? "border-white/5 bg-[#111010] hover:border-[#0131ff]/30 hover:bg-[#14120e]" : "border-slate-40 bg-white hover:border-[#0131ff]/30 hover:bg-white/90"} transition-all duration-300`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <div className={`${isDark ? "text-white/30" : "text-[#0a0a0a]/50"} group-hover:text-[#f97316] transition-colors duration-300`}>{s.icon}</div>
+                  <div className={`${isDark ? "text-white/30" : "text-[#0a0a0a]/50"} group-hover:text-[#0131ff] transition-colors duration-300`}>{s.icon}</div>
                   <div>
-                    <p className={`font-body ${isDark ? "text-white/70" : "text-[#0a0a0a]/70"} text-sm group-hover:${isDark ? "text-white" : "text-[#f97316]"} transition-colors duration-300`}>{s.name}</p>
+                    <p className={`font-body ${isDark ? "text-white/70" : "text-[#0a0a0a]/70"} text-sm group-hover:${isDark ? "text-white" : "text-[#0131ff]"} transition-colors duration-300`}>{s.name}</p>
                     <p className={`font-body ${isDark ? "text-white/30" : "text-[#0a0a0a]/40"} text-xs`}>{s.handle}</p>
                   </div>
-                  <svg className={`w-3.5 h-3.5 ml-auto ${isDark ? "text-white/20" : "text-[#0a0a0a]/40"} group-hover:text-[#f97316] group-hover:translate-x-1 transition-all duration-300`} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+                  <svg className={`w-3.5 h-3.5 ml-auto ${isDark ? "text-white/20" : "text-[#0a0a0a]/40"} group-hover:text-[#0131ff] group-hover:translate-x-1 transition-all duration-300`} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
                 </a>
               ))}
             </div>
@@ -572,17 +580,17 @@ export default function Landing() {
             <div className="flex flex-col gap-5 font-body">
               <div>
                 <label className={`text-xs tracking-widest uppercase ${isDark ? "text-white/30" : "text-[#0a0a0a]/50"} block mb-2`}>Full Name</label>
-                <input type="text" placeholder="Your name" className={`w-full ${isDark ? "bg-[#0a0a0a] border border-white/10 text-white/70 placeholder-white/20" : "bg-white border border-slate-40 text-[#0a0a0a]/80 placeholder-[#6b7280]"} px-4 py-3 text-sm focus:outline-none focus:border-[#f97316]/50 transition-colors duration-200`} />
+                <input type="text" placeholder="Your name" className={`w-full ${isDark ? "bg-[#0a0a0a] border border-white/10 text-white/70 placeholder-white/20" : "bg-white border border-slate-40 text-[#0a0a0a]/80 placeholder-[#6b7280]"} px-4 py-3 text-sm focus:outline-none focus:border-[#0131ff]/50 transition-colors duration-200`} />
               </div>
               <div>
                 <label className={`text-xs tracking-widest uppercase ${isDark ? "text-white/30" : "text-[#0a0a0a]/50"} block mb-2`}>Email</label>
-                <input type="email" placeholder="you@company.com" className={`w-full ${isDark ? "bg-[#0a0a0a] border border-white/10 text-white/70 placeholder-white/20" : "bg-white border border-slate-40 text-[#0a0a0a]/80 placeholder-[#6b7280]"} px-4 py-3 text-sm focus:outline-none focus:border-[#f97316]/50 transition-colors duration-200`} />
+                <input type="email" placeholder="you@company.com" className={`w-full ${isDark ? "bg-[#0a0a0a] border border-white/10 text-white/70 placeholder-white/20" : "bg-white border border-slate-40 text-[#0a0a0a]/80 placeholder-[#6b7280]"} px-4 py-3 text-sm focus:outline-none focus:border-[#0131ff]/50 transition-colors duration-200`} />
               </div>
               <div>
                 <label className={`text-xs tracking-widest uppercase ${isDark ? "text-white/30" : "text-[#0a0a0a]/50"} block mb-2`}>Message</label>
-                <textarea rows={4} placeholder="Tell us about your project..." className={`w-full ${isDark ? "bg-[#0a0a0a] border border-white/10 text-white/70 placeholder-white/20" : "bg-white border border-slate-40 text-[#0a0a0a]/80 placeholder-[#6b7280]"} px-4 py-3 text-sm focus:outline-none focus:border-[#f97316]/50 transition-colors duration-200 resize-none`} />
+                <textarea rows={4} placeholder="Tell us about your project..." className={`w-full ${isDark ? "bg-[#0a0a0a] border border-white/10 text-white/70 placeholder-white/20" : "bg-white border border-slate-40 text-[#0a0a0a]/80 placeholder-[#6b7280]"} px-4 py-3 text-sm focus:outline-none focus:border-[#0131ff]/50 transition-colors duration-200 resize-none`} />
               </div>
-              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=lyvera.2025@gmail.com&su=Project%20Inquiry&body=Hello%20Lyvera,%0D%0A%0D%0A%20I%20am%20Interested%20in%20your%20services.%0D%0A%0D%0A%20Please%20get%20back%20to%20me%20at%20your%20earliest%20convenience." className="bg-[#f97316] text-black font-medium tracking-widest uppercase text-sm px-8 py-4 hover:bg-[#fb923c] transition-colors duration-300 mt-1">
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=lyvera.2025@gmail.com&su=Project%20Inquiry&body=Hello%20Lyvera,%0D%0A%0D%0A%20I%20am%20Interested%20in%20your%20services.%0D%0A%0D%0A%20Please%20get%20back%20to%20me%20at%20your%20earliest%20convenience." className="bg-[#0131ff] text-white font-medium tracking-widest uppercase text-sm px-8 py-4 hover:bg-[#213bad] transition-colors duration-300 mt-1">
                 Send Message →
               </a>
             </div>
@@ -593,14 +601,14 @@ export default function Landing() {
       {/* FOOTER */}
       <footer className="border-t border-white/5 py-10 px-6 md:px-12">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 font-body">
-          <img src={isDark ? "/team/logos/splashlogo.png" : "/team/logos/logoforlight.png"} className="w-16 h-8" alt="Lyvera logo" />
+          <img src={isDark ? "/team/logos/splashlogo1.png" : "/team/logos/logoforlight1.png"} className="w-16 h-8" alt="Lyvera logo" />
           <p className={`${isDark ? "text-white/50" : "text-[#0a0a0a]/60"} text-xs tracking-widest text-center`}>
             © {new Date().getFullYear()} Lyvera Marketing Services. All rights reserved.
           </p>
           <div className="flex gap-4">
             {SOCIALS.slice(0, 3).map((s) => (
               
-              <a target="_blank" rel="noopener noreferrer" targetkey={s.name} href={s.href} className={`text-[#0a0a0a]/30 hover:text-[#f97316] transition-colors duration-200 ${isDark ? "text-white/50 hover:text{#f97316}" : "hover:text-[#0a0a0a]"}`}>{s.icon}</a>
+              <a target="_blank" rel="noopener noreferrer" targetkey={s.name} href={s.href} className={`text-[#0a0a0a]/30 hover:text-[#0131ff] transition-colors duration-200 ${isDark ? "text-white/50 hover:text{#f97316}" : "hover:text-[#0a0a0a]"}`}>{s.icon}</a>
             ))}
           </div>
         </div>
