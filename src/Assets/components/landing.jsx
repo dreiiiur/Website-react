@@ -255,7 +255,7 @@ export default function Landing() {
         .gold { color: #f97316; }
         .gold-border { border-color: #f97316; }
         .gold-bg { background-color: #f97316; }
-        .slider-track { display: flex; transition: transform 0.6s cubic-bezier(.27,2,.46,2); }
+        .slider-track { display: flex; transition: transform 0.6s cubic-bezier(.27,1,.46,2); }
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: #f5f5f5; }
         ::-webkit-scrollbar-thumb { background: #f9731644; border-radius: 3px; }
@@ -468,7 +468,21 @@ export default function Landing() {
 
         <div className="relative overflow-hidden">
           {/* Slider */}
-          <div className="flex items-stretch gap-5 transition-all duration-700" style={{ transform: `translateX(calc(-${teamIdx * (100 / 3)}% - ${teamIdx * 20 / 3}px))` }}>
+          <div className="flex items-stretch gap-5 transition-all duration-700" style={{ transform: `translateX(calc(-${teamIdx * (100 / 3)}% - ${teamIdx * 20 / 3}px))` }} onMouseDown={(e) => {
+            const startX = e.clientX;
+            const startTeamIdx = teamIdx;
+            const handleMouseMove = (e) => {
+              const diffX = e.clientX - startX;
+              const newTeamIdx = Math.round(startTeamIdx - diffX / (window.innerWidth / 3));
+              setTeamIdx(Math.max(0, Math.min(TEAM.length - 1, newTeamIdx)));
+            };
+            const handleMouseUp = () => {
+              window.removeEventListener("mousemove", handleMouseMove);
+              window.removeEventListener("mouseup", handleMouseUp);
+            };
+            window.addEventListener("mousemove", handleMouseMove);
+            window.addEventListener("mouseup", handleMouseUp);
+          }}>
             {TEAM.map((m, i) => {
               const isActive = i === teamIdx;
               return (

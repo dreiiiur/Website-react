@@ -23,12 +23,19 @@ const Splashscreen = () => {
       left: 0;
       width: 100vw;
       height: 100vh;
-      background: #0a0a0a;
+      background-color: #333333;
       display: flex;
       justify-content: center;
       align-items: center;
       z-index: 9999;
       perspective: 1000px;
+      @media (max-width: 768px) {
+        background: #333;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
     }
     .logo {
       width: 400px;
@@ -36,6 +43,9 @@ const Splashscreen = () => {
       animation: splashAnimation 3s ease-in-out forwards;
       transform-style: preserve-3d;
       backface-visibility: hidden;
+      @media (max-width: 768px) {
+        width: 300px;
+      }
     }
   `;
 
