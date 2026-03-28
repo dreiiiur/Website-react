@@ -590,7 +590,7 @@ export default function Landing() {
                 <label className={`text-xs tracking-widest uppercase ${isDark ? "text-white/30" : "text-[#0a0a0a]/50"} block mb-2`}>Message</label>
                 <textarea rows={4} placeholder="Tell us about your project..." className={`w-full ${isDark ? "bg-[#0a0a0a] border border-white/10 text-white/70 placeholder-white/20" : "bg-white border border-slate-40 text-[#0a0a0a]/80 placeholder-[#6b7280]"} px-4 py-3 text-sm focus:outline-none focus:border-[#0131ff]/50 transition-colors duration-200 resize-none`} />
               </div>
-              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=lyvera.2025@gmail.com&su=Project%20Inquiry&body=Hello%20Lyvera,%0D%0A%0D%0A%20I%20am%20Interested%20in%20your%20services.%0D%0A%0D%0A%20Please%20get%20back%20to%20me%20at%20your%20earliest%20convenience." className="bg-[#0131ff] text-white font-medium tracking-widest uppercase text-sm px-8 py-4 hover:bg-[#213bad] transition-colors duration-300 mt-1">
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=lyvera.andrei@gmail.com&su=Project%20Inquiry&body=Hello%20Lyvera,%0D%0A%0D%0A%20I%20am%20Interested%20in%20your%20services.%0D%0A%0D%0A%20Please%20get%20back%20to%20me%20at%20your%20earliest%20convenience." className="bg-[#0131ff] text-white font-medium tracking-widest uppercase text-sm px-8 py-4 hover:bg-[#213bad] transition-colors duration-300 mt-1">
                 Send Message →
               </a>
             </div>
