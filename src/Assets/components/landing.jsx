@@ -124,12 +124,6 @@ const TEAM = [
     img: "/team/aldrin.png",
     quote: "Community is the new currency of brands.",
   },
-  {
-    name: "Brix Aldrin Macapagal",
-    role: "Production",
-    img: "/team/brixaldrin.png",
-    quote: "Community is the new currency of brands.",
-  },
     {
     name: "Jan Lorenz Cortez",
     role: "Production",
@@ -583,7 +577,7 @@ export default function Landing() {
                 <input type="text" placeholder="Your name" className={`w-full ${isDark ? "bg-[#0a0a0a] border border-white/10 text-white/70 placeholder-white/20" : "bg-white border border-slate-40 text-[#0a0a0a]/80 placeholder-[#6b7280]"} px-4 py-3 text-sm focus:outline-none focus:border-[#0131ff]/50 transition-colors duration-200`} />
               </div>
               <div>
-                <label className={`text-xs tracking-widest uppercase ${isDark ? "text-white/30" : "text-[#0a0a0a]/50"} block mb-2`}>Email</label>
+                <label className={`text-xs tracking-widest uppercase ${isDark ? "text-white/30" : "text-[#0a0a0a]/50"} block mb-2`}>Email</label> 
                 <input type="email" placeholder="you@company.com" className={`w-full ${isDark ? "bg-[#0a0a0a] border border-white/10 text-white/70 placeholder-white/20" : "bg-white border border-slate-40 text-[#0a0a0a]/80 placeholder-[#6b7280]"} px-4 py-3 text-sm focus:outline-none focus:border-[#0131ff]/50 transition-colors duration-200`} />
               </div>
               <div>
